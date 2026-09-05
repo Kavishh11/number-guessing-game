@@ -30,7 +30,6 @@ else:
     print("Please choose a correct option.")
     exit()
 
-# Generate the secret number
 number = random.randint(1, max_number)
 
 print(f"\nI'm thinking of a number between 1 and {max_number}.")
@@ -44,14 +43,14 @@ while attempts < max_attempts:
     attempts += 1
 
     if guess == number:
-        print(f" Correct! You guessed the number in {attempts} attempts.")
+        print(f"🎉 Correct! You guessed the number in {attempts} attempts.")
         break
 
     elif guess > number:
-        print(" Too high!")
+        print("📉 Too high!")
 
     else:
-        print(" Too low!")
+        print("📈 Too low!")
 
     remaining = max_attempts - attempts
 
@@ -59,4 +58,4 @@ while attempts < max_attempts:
         print(f"You have {remaining} attempts remaining.")
 
 else:
-    print(f"\n Game over! The number was {number}.")
+    print(f"\n😢 Game over! The number was {number}.")
